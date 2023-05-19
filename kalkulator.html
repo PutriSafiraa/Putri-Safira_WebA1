@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+</head>
+<body>
+<header>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:rgb(1, 20, 14); font-size: 30px; background-color: rgb(108, 199, 211); text-align: center;">Kalkulator</h1>
+</header>
+
+<div>
+    <input type ="number" id="angka1">
+    <select id ="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    </select>
+    <input type="number" id="angka2">
+    <span>=</span>
+    <span id="hasil">hasil</span><br><br>
+    <button id="submit">submit</button>
+</div>
+
+<script>
+        const angka1 = document.getElementById("angka1");
+        const angka2 = document.getElementById("angka2");
+        const operator = document.getElementById("operator");
+        const hasil = document.getElementById("hasil");
+        const submit = document.getElementById("submit");
+    submit.addEventListener('click', function(){
+    
+    hasil.innerText = eval(angka1.value + operator.value + angka2.value);
+
+    })
+
+</script>
+</body>
+</html>
